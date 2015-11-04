@@ -17,6 +17,7 @@
     - iptraf
     - vim
     - emacs
+    - git
   when: is_debian_or_ubuntu
   environment:
     http_proxy: http://cloud-proxy:3128
