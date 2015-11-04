@@ -77,6 +77,8 @@
 - name: Ensure aptidude packages is installed
   action: apt name=aptitude state=installed update_cache=yes
   when: is_debian_or_ubuntu
+  sudo: yes
+  sudo_user: root
   with_items:
     - aptitude
   environment:
