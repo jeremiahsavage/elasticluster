@@ -50,6 +50,8 @@
   
 - name: Check if `python-apt` package is installed
   action: shell apt-get install -y {{item}}
+  sudo: yes
+  sudo_user: root
   with_items:
     - python-apt
     - sysvinit-utils
