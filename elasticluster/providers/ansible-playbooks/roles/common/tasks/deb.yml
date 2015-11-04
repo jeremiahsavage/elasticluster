@@ -11,7 +11,14 @@
     - software-properties-common
     - python-software-properties
     - python-pycurl
+    - htop
+    - most
+    - s3cmd
+    - iptraf
   when: is_debian_or_ubuntu
+  environment:
+    http_proxy: http://cloud-proxy:3128
+    https_proxy: http://cloud-proxy:3128
 
 - name: Ensure extra reposistories are present (Ubuntu)
   action: apt_repository repo="deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} universe multiverse" state=present
