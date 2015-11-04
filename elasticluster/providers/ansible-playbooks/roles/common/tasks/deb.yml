@@ -2,6 +2,9 @@
 - name: Ensure that package cache is updated
   action: shell apt-get update -y
   when: is_debian_or_ubuntu
+  environment:
+    http_proxy: http://cloud-proxy:3128
+    https_proxy: http://cloud-proxy:3128
 
 - name: apt update
   apt: update_cache=yes
