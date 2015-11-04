@@ -17,7 +17,10 @@
   when: is_debian_or_ubuntu
   tags:
     - nfs
-
+  environment:
+    http_proxy: http://cloud-proxy:3128
+    https_proxy: http://cloud-proxy:3128
+  
 - name: install nfs client
   action: yum pkg=nfs-utils state=present
   when: is_centos
