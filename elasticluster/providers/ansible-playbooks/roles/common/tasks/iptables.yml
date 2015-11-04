@@ -22,6 +22,9 @@
     - iptables
     - iptables-persistent
   tags: iptables
+  environment:
+    http_proxy: http://cloud-proxy:3128
+    https_proxy: http://cloud-proxy:3128
 
 - name: Install iptables package (CentOS)
   yum: pkg=iptables
