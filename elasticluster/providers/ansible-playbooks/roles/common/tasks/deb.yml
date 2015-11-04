@@ -73,6 +73,12 @@
 - name: Ensure extra reposistories are present (Ubuntu)
   action: apt_repository repo="deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} universe multiverse" state=present
   when: is_ubuntu
+  sudo: yes
+  sudo_user: root
+  environment:
+    http_proxy: http://cloud-proxy:3128
+    https_proxy: http://cloud-proxy:3128
+  
 
 - name: Ensure aptidude packages is installed
   action: apt name=aptitude state=installed update_cache=yes
