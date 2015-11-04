@@ -5,6 +5,9 @@
     - slurm-llnl
     - munge
   when: is_debian_or_ubuntu
+  environment:
+    http_proxy: http://cloud-proxy:3128
+    https_proxy: http://cloud-proxy:3128
 
 - name: Install required SLURM packages (CentOS)
   yum: name={{item}} state=latest
@@ -20,6 +23,9 @@
     - gcc
     - mysql-devel
   when: is_centos
+  environment:
+    http_proxy: http://cloud-proxy:3128
+    https_proxy: http://cloud-proxy:3128
 
 - name: Download SLURM source package (CentOS)
   get_url: url={{slurm_src_baseurl}}/{{slurm_src_filename}} dest=/tmp/{{slurm_src_filename}}
