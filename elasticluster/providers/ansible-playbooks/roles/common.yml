@@ -8,5 +8,6 @@
     - include: common/tasks/epel_repo.yml
     - include: common/tasks/hosts.yml hosts={{groups.all}}
     - include: common/tasks/hostname.yml
+    - include: common/tasks/docker.yml
   handlers:
     - include: common/handlers/main.yml
