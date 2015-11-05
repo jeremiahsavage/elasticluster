@@ -1,2 +1,12 @@
 ---
-- include: gc3repo.yml
+- name: set soft ulimit nofile to 100000
+  lineinfile: dest="/etc/security/limits.conf" line="*\tsoft\tnofile\t100000" owner=root
+  remote_user: ubuntu
+  sudo: yes
+  sudo_user: root
+
+- name: set hard ulimit nofile to 100000
+  lineinfile: dest="/etc/security/limits.conf" line="*\thard\tnofile\t100000" owner=root
+  remote_user: ubuntu
+  sudo: yes
+  sudo_user: root
