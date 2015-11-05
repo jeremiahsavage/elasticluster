@@ -13,6 +13,7 @@ To run on CDIS cloud
 3. on login-node, create a virtualenv for elasticluster using python2
 
         $ mkvirtualenv --python /usr/bin/python2 p2
+	$ workon p2
 
 4. on login-node, clone elasticluster
 
