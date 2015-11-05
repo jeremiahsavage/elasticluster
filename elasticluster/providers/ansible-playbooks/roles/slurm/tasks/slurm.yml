@@ -5,6 +5,13 @@
   tags: 
     - slurm
 
+- name: Configure PAM for SLURM
+  remote_user: ubuntu
+  sudo: yes
+  sudo_user: root
+  template: src=slurm/templates/slurm.j2 dest=/etc/pam.d/slurm owner=root group=root mode=0644
+
+
 - name: Ensure main slurm directories exist
   file: path={{item}} state=directory owner=slurm
   with_items:
