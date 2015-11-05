@@ -15,14 +15,17 @@ To run on CDIS cloud
         $ mkvirtualenv --python /usr/bin/python2 p2
         ```
 4. on gdc-login, clone elasticluster
-        ```bash
+        
         $ git clone https://github.com/jeremiahsavage/elasticluster.git
-        ```
+        
+
 5. on gdc-login, install elasticluster to p2 virtualenv
+        
         $ cd elasticluster
         $ pip install -e .
 
 6. on gdc-login, create elasticluster config file(ask for template config)
+        
         $ mkdir ~/.elasticluster
         $ cp config ~/.elasticluster/
 
