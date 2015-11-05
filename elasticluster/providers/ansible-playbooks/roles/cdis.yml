@@ -1,0 +1,5 @@
+---
+- name: CDIS master playbook
+  hosts: all
+  tasks:
+    - include: cdis/tasks/setup_ephemeral.yml

@@ -1,0 +1,15 @@
+- name: create SCRATCH mount point
+  remote_user: ubuntu
+  sudo: yes
+  sudo_user: root  
+  file: path=/mnt/SCRATCH/ mode=0777 owner=ubuntu state=directory
+
+- name: link SCRATCH to home dir
+  remote_user: ubuntu
+  shell: ln -fs /mnt/SCRATCH /home/ubuntu
+
+- name: set data owner to ubuntu
+  file: path=/home/ubuntu/SCRATCH/ recurse=yes owner=ubuntu group=ubuntu
+
+- name: create tmp dir on scratch
+  file: path=/home/ubuntu/SCRATCH/tmp recurse=yes owner=ubuntu group=ubuntu state=directory
