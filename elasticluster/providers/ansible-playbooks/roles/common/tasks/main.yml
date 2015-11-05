@@ -10,3 +10,7 @@
   remote_user: ubuntu
   sudo: yes
   sudo_user: root
+
+- name: add ${HOME}/.local/bin to $PATH
+  lineinfile: dest="/home/ubuntu/.bashrc" line="PATH=${HOME}/.local/bin:$PATH"
+  remote_user: ubuntu
