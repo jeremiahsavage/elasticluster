@@ -1,41 +1,41 @@
 To run on CDIS cloud
 --------------------
-1. on gdc-login, set http{s}_proxy
+1. on login-node, set http{s}_proxy
 
         $ export http_proxy=http://cloud-proxy:3128; export https_proxy=http://cloud-proxy:3128;
 
-2. on gdc-login, locally install virtualenvwrapper
+2. on login-node, locally install virtualenvwrapper
 
         $ pip install virtualenvwrapper --user
         $ echo "source ${HOME}/.local/bin/virtualenvwrapper.sh" >> ~/.bashrc
         $ source ${HOME}/.local/bin/virtualenvwrapper.sh
 
-3. on gdc-login, create a virtualenv for elasticluster using python2
+3. on login-node, create a virtualenv for elasticluster using python2
 
         $ mkvirtualenv --python /usr/bin/python2 p2
 
-4. on gdc-login, clone elasticluster
+4. on login-node, clone elasticluster
 
         $ git clone https://github.com/jeremiahsavage/elasticluster.git
 
-5. on gdc-login, install elasticluster to p2 virtualenv
+5. on login-node, install elasticluster to p2 virtualenv
 
         $ cd elasticluster
         $ pip install -e .
 
-6. on gdc-login, create elasticluster config file(ask for template config)
+6. on login-node, create elasticluster config file(ask for template config)
 
         $ mkdir ~/.elasticluster
         $ cp config ~/.elasticluster/
 
-7. on gdc-login, start cluster. wait for all tasks to complete
+7. on login-node, start cluster. wait for all tasks to complete
 
         $ elasticluster start -vvv <cluster-name>
 
-8. on gdc-login, get ip of cluster frontend
+8. on login-node, get ip of cluster frontend
 
         $ nova list
 
-9. on gdc-login, ssh into cluster frontend
+9. on login-node, ssh into cluster frontend
 
         $ elasticluster ssh <cluster-name>
