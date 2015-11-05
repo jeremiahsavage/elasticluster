@@ -40,3 +40,7 @@ To run on CDIS cloud
 9. on login-node, ssh into cluster frontend
 
         $ elasticluster ssh <cluster-name>
+
+10. on login-node, you may leave virtualenv
+
+        $ deactivate
