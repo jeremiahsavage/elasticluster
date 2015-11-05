@@ -55,6 +55,10 @@
     - vim
     - emacs
     - git
+    - python3-dev
+    - python-dev
+    - r-base
+    - r-base-dev
   when: is_debian_or_ubuntu
   environment:
     http_proxy: http://cloud-proxy:3128
