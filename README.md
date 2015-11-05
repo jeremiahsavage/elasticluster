@@ -5,16 +5,21 @@ $ export http_proxy=http://cloud-proxy:3128; export https_proxy=http://cloud-pro
 ```
 
 1. on gdc-login, locally install virtualenvwrapper
-```$ pip install virtualenvwrapper --user```
-```$ echo "source ${HOME}/.local/bin/virtualenvwrapper.sh" >> ~/.bashrc```
-```$ source ${HOME}/.local/bin/virtualenvwrapper.sh```
+```$ pip install virtualenvwrapper --user
+$ echo "source ${HOME}/.local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+$ source ${HOME}/.local/bin/virtualenvwrapper.sh
+```
 
 
 2. on gdc-login, create a virtualenv for elasticluster using python2
-```$ mkvirtualenv --python /usr/bin/python2 p2```
+```
+$ mkvirtualenv --python /usr/bin/python2 p2
+```
 
 3. on gdc-login, clone elasticluster
-```$ git clone https://github.com/jeremiahsavage/elasticluster.git```
+```
+$ git clone https://github.com/jeremiahsavage/elasticluster.git
+```
 
 4. on gdc-login, install elasticluster to p2 virtualenv
 ```
@@ -29,8 +34,12 @@ $ cp config ~/.elasticluster/
 ```
 
 6. on gdc-login, start cluster
-```$ elasticluster start -vvv <cluster-name>```
+```
+$ elasticluster start -vvv <cluster-name>
+```
 wait for all tasks to complete
 
 7. on gdc-login, get ip of cluster frontend
+```
 $ nova list
+```
