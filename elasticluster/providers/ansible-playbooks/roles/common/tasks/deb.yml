@@ -57,6 +57,8 @@
     - git
     - python3-dev
     - python-dev
+    - python-pip
+    - python3-pip
     - r-base
     - r-base-dev
   when: is_debian_or_ubuntu
