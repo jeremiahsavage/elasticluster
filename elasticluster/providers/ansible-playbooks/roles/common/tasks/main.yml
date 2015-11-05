@@ -18,3 +18,7 @@
 - name: python3 as default virtualenvwrapper python
   lineinfile: dest="/home/ubuntu/.bashrc" line="export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3"
   remote_user: ubuntu
+
+- name: source virtualenvwrapper.sh
+  lineinfile: dest="/home/ubuntu/.bashrc" line="source ${HOME}/.local/bin/virtualenvwrapper.sh"
+  remote_user: ubuntu
