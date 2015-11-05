@@ -5,7 +5,8 @@ $ export http_proxy=http://cloud-proxy:3128; export https_proxy=http://cloud-pro
 ```
 
 1. on gdc-login, locally install virtualenvwrapper
-```$ pip install virtualenvwrapper --user
+```
+$ pip install virtualenvwrapper --user
 $ echo "source ${HOME}/.local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 $ source ${HOME}/.local/bin/virtualenvwrapper.sh
 ```
