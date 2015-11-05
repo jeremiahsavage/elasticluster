@@ -31,8 +31,10 @@ To run on CDIS cloud
 7. on gdc-login, start cluster
 
         $ elasticluster start -vvv <cluster-name>
-        
+
+
 ⋅⋅* wait for all tasks to complete
+
 
 8. on gdc-login, get ip of cluster frontend
 
