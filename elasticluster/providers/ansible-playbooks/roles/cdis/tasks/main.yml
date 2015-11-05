@@ -9,11 +9,11 @@
 
 
 - name: put http_proxy in root .bash_history
-  lineinfile: dest="/root/.bash_history" line="export http_proxy=http://cloud-proxy:3128; export https_proxy=http://cloud-proxy:3128;" owner=root
+  lineinfile: dest="/root/.bash_history" line="export http_proxy=http://cloud-proxy:3128; export https_proxy=http://cloud-proxy:3128;" owner=root create=yes state=present
   remote_user: ubuntu
   sudo: yes
   sudo_user: root
 
 - name: put http_proxy in ubuntu .bash_history
-  lineinfile: dest="/home/ubuntu/.bash_history" line="export http_proxy=http://cloud-proxy:3128; export https_proxy=http://cloud-proxy:3128;"
+  lineinfile: dest="/home/ubuntu/.bash_history" line="export http_proxy=http://cloud-proxy:3128; export https_proxy=http://cloud-proxy:3128;" create=yes state=present
   remote_user: ubuntu
