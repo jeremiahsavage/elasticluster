@@ -14,3 +14,7 @@
 - name: add ${HOME}/.local/bin to $PATH
   lineinfile: dest="/home/ubuntu/.bashrc" line="PATH=${HOME}/.local/bin:$PATH"
   remote_user: ubuntu
+
+- name: python3 as default virtualenvwrapper python
+  lineinfile: dest="/home/ubuntu/.bashrc" line="export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3"
+  remote_user: ubuntu
