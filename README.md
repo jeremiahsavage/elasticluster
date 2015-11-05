@@ -28,13 +28,9 @@ To run on CDIS cloud
         $ mkdir ~/.elasticluster
         $ cp config ~/.elasticluster/
 
-7. on gdc-login, start cluster
+7. on gdc-login, start cluster. wait for all tasks to complete
 
         $ elasticluster start -vvv <cluster-name>
-
-
-⋅⋅* wait for all tasks to complete
-
 
 8. on gdc-login, get ip of cluster frontend
 
