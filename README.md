@@ -24,10 +24,12 @@ To run on CDIS cloud
         $ pip install -e .
         ```
 6. on gdc-login, create elasticluster config file(ask for template config)
+        
         ```bash
         $ mkdir ~/.elasticluster
         $ cp config ~/.elasticluster/
         ```
+        
 7. on gdc-login, start cluster
         ```bash
         $ elasticluster start -vvv <cluster-name>
