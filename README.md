@@ -35,3 +35,7 @@ To run on CDIS cloud
 8. on gdc-login, get ip of cluster frontend
 
         $ nova list
+
+9. on gdc-login, ssh into cluster frontend
+
+        $ elasticluster ssh <cluster-name>
