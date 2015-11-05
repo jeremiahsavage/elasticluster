@@ -1,0 +1,19 @@
+---
+- name: copy .novarc to cluster
+  copy: src="~/.novarc" dest="/home/ubuntu/"
+  remote_user: ubuntu
+
+- name: have .bashrc source .novarc
+  lineinfile: dest="/home/ubuntu/.bashrc" line="source ~/.novarc"
+  remote_user: ubuntu
+
+
+- name: put http_proxy in root .bash_history
+  lineinfile: dest="/root/.bash_history" line="export http_proxy=http://cloud-proxy:3128; export https_proxy=http://cloud-proxy:3128;" owner=root
+  remote_user: ubuntu
+  sudo: yes
+  sudo_user: root
+
+- name: put http_proxy in ubuntu .bash_history
+  lineinfile: dest="/home/ubuntu/.bash_history" line="export http_proxy=http://cloud-proxy:3128; export https_proxy=http://cloud-proxy:3128;"
+  remote_user: ubuntu
