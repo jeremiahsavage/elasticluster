@@ -6,4 +6,5 @@
     - group_by: key="$gc3group"
 
 - include: roles/common.yml
+- include: roles/cdis.yml
 - include: roles/slurm.yml
