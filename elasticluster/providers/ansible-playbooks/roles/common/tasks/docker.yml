@@ -15,7 +15,7 @@
   sudo: yes
   sudo_user: root
   when: is_debian_or_ubuntu
-  apt_repository: state=present update_cache=yes repo='deb https://get.docker.io/ubuntu docker main'
+  apt_repository: state=present update_cache=yes repo='deb https://get.docker.com/ubuntu docker main'
   environment:
     http_proxy: http://cloud-proxy:3128
     https_proxy: http://cloud-proxy:3128
